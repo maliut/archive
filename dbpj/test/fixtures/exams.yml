@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course_id: MyString
+  type: 
+  date: MyString
+  room: MyString
+  grade_time: MyString
+
+two:
+  course_id: MyString
+  type: 
+  date: MyString
+  room: MyString
+  grade_time: MyString

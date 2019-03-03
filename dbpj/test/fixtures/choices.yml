@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employee_id: MyString
+  course_id: MyString
+  grade: 1
+  apply_time: MyString
+  state: 1
+
+two:
+  employee_id: MyString
+  course_id: MyString
+  grade: 1
+  apply_time: MyString
+  state: 1

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Employees Not Active</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Join date</th>
+      <th>Location</th>
+      <th>Salary</th>
+      <th>Bonus</th>
+      <th>Department</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.user_id %></td>
+        <td><%= employee.name %></td>
+        <td><%= employee.gender %></td>
+        <td><%= employee.join_date %></td>
+        <td><%= employee.location %></td>
+        <td><%= employee.salary %></td>
+        <td><%= employee.bonus %></td>
+        <td><%= employee.department ? employee.department.name : '' %></td>
+        <td><%= link_to 'Create User Info', action: 'new', default: employee.user_id %></td>
+        <td><%= link_to 'Show', employee %></td>
+        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

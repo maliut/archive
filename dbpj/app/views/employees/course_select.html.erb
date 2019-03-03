@@ -1,0 +1,59 @@
+<h1>Choose Courses</h1>
+<p>Department: <%= current_user.role.department.name%></p>
+<% if @courses != nil %>
+    <form action="/employees/course_select" method="post">
+      <h2>Plans</h2>
+      <table>
+        <thead>
+        <tr>
+          <th>choose</th>
+          <th>Course</th>
+          <th>Name</th>
+          <th>Teacher</th>
+          <th>Hours</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @courses.each do |course| %>
+            <tr>
+              <td><%= check_box_tag 'courses[]', course.course_id, :checked => true%></td>
+              <td><%= course.course_id %></td>
+              <td><%= course.name %></td>
+              <td><%= course.teacher_id %></td>
+              <td><%= course.hours %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <h2>Other Courses</h2>
+      <table>
+        <thead>
+        <tr>
+          <th>choose</th>
+          <th>Course</th>
+          <th>Name</th>
+          <th>Teacher</th>
+          <th>Hours</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @otherCourses.each do |course| %>
+            <tr>
+              <td><%= check_box_tag 'courses[]', course.course_id%></td>
+              <td><%= course.course_id %></td>
+              <td><%= course.name %></td>
+              <td><%= course.teacher_id %></td>
+              <td><%= course.hours %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <br>
+      <input type="submit" name="submit" value="submit"/>
+    </form>
+<% else %>
+    <p>No Plan Now</p>
+<% end %>

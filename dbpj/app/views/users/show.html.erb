@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.user_id %>
+</p>
+
+<% types = [["CEO", 0], ["admin", 1], ["teacher", 2], ["manager", 3], ["employee", 4]] 
+   type_str = types[@user.user_type][0] %>
+<p>
+  <strong>Type:</strong>
+  <%= type_str.capitalize %>
+</p>
+
+<p>
+  <% if @user.user_type == 0 && @user == current_user %>
+    <%= link_to 'Teachers', teachers_path %> |
+    <%= link_to 'Courses', courses_path %> |
+    <%= link_to 'Managers', managers_path %> |
+    <%= link_to 'Employees', employees_path %>
+  <% end %>
+
+  <% if @user.user_type == 1 && @user == current_user  %>
+      <%= link_to 'Manage All Users', users_path %>
+  <% end %>
+
+  <% if @user.user_type >= 2 %>
+    <%= link_to "#{type_str.capitalize} Info", "/#{type_str}s/#{@user.user_id}" %>
+  <% end %>
+</p>
+<br>
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,32 @@
+<h1>Make Plan</h1>
+<p>Department: <%= current_user.role.department.name%></p>
+<form action="/plans" method="post">
+  <table>
+    <thead>
+    <tr>
+      <th>choose</th>
+      <th>Course</th>
+      <th>Name</th>
+      <th>Teacher</th>
+      <th>Hours</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @courses.each do |course| %>
+        <tr>
+          <td><%= check_box_tag 'courses[]', course.course_id%></td>
+          <td><%= course.course_id %></td>
+          <td><%= course.name %></td>
+          <td><%= course.teacher_id %></td>
+          <td><%= course.hours %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <input type="submit" name="submit" value="submit"/>
+
+</form>
+
+<%= link_to 'Back', plans_path %>

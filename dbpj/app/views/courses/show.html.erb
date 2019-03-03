@@ -1,0 +1,101 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Course Messages</h2>
+<p>
+  <strong>Course:</strong>
+  <%= @course.course_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @course.teacher ? @course.teacher.name : '' %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @course.hours %>
+</p>
+
+<!--teacher-->
+<% if current_user.user_type == 2 %>
+    <!--plans-->
+    <% if !@choices.empty? %>
+        <form action="/courses/grade"  method="post">
+          <h2>Students</h2>
+          <table>
+            <thead>
+            <tr>
+              <th>Student</th>
+              <th>grade</th>
+              <th>apply_time</th>
+              <th>state</th>
+              <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <% @choices.each do |choice| %>
+                <tr>
+                  <td><%= choice.employee_id %></td>
+                  <% if (choice.state != 0 and choice.state != 4) or (@course.exams.empty?) or (choice.state !=0 && @course.exams.size < 2) %>
+                      <td><%= choice.grade %></td>
+                  <% else %>
+                      <td><input type="number" name="grades[<%= choice.employee_id %>]" value="<%= choice.grade %>"></td>
+                <% end %>
+                  <td><%= choice.apply_time %></td>
+                  <td><%= choice.state_string %></td>
+                <% if choice.state == 3 %>
+                  <td><%= link_to 'Ok', '/teachers/check?reply=1&employee_id='+choice.employee_id + '&course_id=' + choice.course_id %> |
+                  <%= link_to 'No', '/teachers/check?reply=0&employee_id='+choice.employee_id + '&course_id=' + choice.course_id %></td>
+                <% end %>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <br>
+          <input type="hidden" name="course" value="<%= @course.id %>">
+          <input type="submit" name="submit" value="submit" />
+        </form>
+    <% else %>
+        <h2>No Students Now</h2>
+    <% end %>
+<% end %>
+
+<!--CEO-->
+<% if current_user.user_type == 0 %>
+    <!--plans-->
+    <% if !@choices.empty? %>
+          <h2>Students</h2>
+          <table>
+            <thead>
+            <tr>
+              <th>Student</th>
+              <th>grade</th>
+              <th>apply_time</th>
+              <th>state</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <% @choices.each do |choice| %>
+                <tr>
+                  <td><%= choice.employee_id %></td>
+                  <td><%= choice.grade %></td>
+                  <td><%= choice.apply_time %></td>
+                  <td><%= choice.state_string %></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <br>
+    <% else %>
+        <h2>No Students Now</h2>
+    <% end %>
+<% end %>
+
+<%= link_to 'Back', courses_path %>

@@ -1,0 +1,42 @@
+<%= form_for(exam) do |f| %>
+  <% if exam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(exam.errors.count, "error") %> prohibited this exam from being saved:</h2>
+
+      <ul>
+      <% exam.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :course_id %>
+    <%= f.text_field :course_id,:readonly => true%>
+  </div>
+
+  <div class="field">
+    <%= f.label :exam_type %>
+    <%= f.select :exam_type, [['normal',0],['make-up',1]] %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :room %>
+    <%= f.text_field :room %>
+  </div>
+
+   <div class="field">
+    <%= f.label :grade_time %>
+    <%= f.text_field :grade_time, type:'hidden' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

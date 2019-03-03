@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Course</th>
+      <th>Name</th>
+      <th>Teacher</th>
+      <th>Hours</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td><%= course.course_id %></td>
+        <td><%= course.name %></td>
+        <td><%= course.teacher ? course.teacher.name : '' %></td>
+        <td><%= course.hours %></td>
+        <td><%= link_to 'Show', course %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

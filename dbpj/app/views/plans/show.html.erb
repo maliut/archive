@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Department: <%= @plan.department.name %></h1>
+<% if @courses != nil %>
+    <h2>Plans</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>choose</th>
+        <th>Course</th>
+        <th>Name</th>
+        <th>Teacher</th>
+        <th>Hours</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @courses.each do |course| %>
+          <tr>
+            <td><%= check_box_tag 'courses[]', course.course_id, :checked => true%></td>
+            <td><%= course.course_id %></td>
+            <td><%= course.name %></td>
+            <td><%= course.teacher ? course.teacher.name : '' %></td>
+            <td><%= course.hours %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% else %>
+    <p>No Plan Now</p>
+<% end %>
+

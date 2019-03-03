@@ -1,0 +1,69 @@
+<h1>Editing Employee</h1>
+
+<% employee = @employee %>
+<%= form_for(employee) do |f| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id, readonly: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <% genders = [["male", "male"], ["female", "female"], ["futa", "futa"]] %>
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.select :gender, genders %>
+  </div>
+
+  <div class="field">
+    <%= f.label :join_date %>
+    <%= f.number_field :join_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :salary %>
+    <%= f.number_field :salary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bonus %>
+    <%= f.number_field :bonus %>
+  </div>
+
+  <div class="field">
+    <%= f.label :department_id %>
+    <% if current_user.user_type == 3 %>
+      <%= f.select :department_id, Department.selects, {},{disabled:true} %>
+      <%= f.text_field :department_id, type: 'hidden'%>
+    <% elsif current_user.user_type == 1 %>
+      <%= f.select :department_id, Department.selects %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Show', @employee %> | <%= link_to 'Back', employees_path %>
+
