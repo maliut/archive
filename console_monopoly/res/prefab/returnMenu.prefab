@@ -1,0 +1,1 @@
+{"tag":"returnMenu","layer":4,"position":{"x":5,"y":24},"direction":"DOWN","components":{"user.component.ReturnMenu":{"requestInputType":0,"itemNum":1,"cursor":0,"cursorPoint":{"x":5,"y":24}},"kernel.component.Renderer":{"enabled":false,"content":"menu.return","height":10,"width":20,"background":40,"foreground":37},"kernel.component.Trigger":{"enabled":false,"triggerType":4}}}

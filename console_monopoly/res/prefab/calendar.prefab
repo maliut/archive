@@ -1,0 +1,1 @@
+{"tag":"calendar","layer":3,"position":{"x":84,"y":2},"direction":"DOWN","components":{"kernel.component.Trigger":{"enabled":true,"triggerType":3},"kernel.component.Renderer":{"enabled":true,"height":1,"width":15,"background":40,"foreground":37,"formatterClassStr":"Calendar","formatterMethodStr":"format"},"user.component.Calendar":{}}}

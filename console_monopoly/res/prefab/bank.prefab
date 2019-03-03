@@ -1,0 +1,1 @@
+{"tag":"cell","layer":0,"position":{"x":0,"y":0},"direction":"DOWN","components":{"kernel.component.Trigger":{"enabled":true,"triggerType":1},"user.component.Bank":{},"kernel.component.Renderer":{"enabled":true,"content":"icon.bank","height":2,"width":2,"background":40,"foreground":37}}}

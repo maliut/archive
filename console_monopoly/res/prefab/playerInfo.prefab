@@ -1,0 +1,1 @@
+{"tag":"playerInfo","layer":3,"position":{"x":87,"y":4},"direction":"DOWN","components":{"kernel.component.Renderer":{"enabled":true,"height":30,"width":15,"background":40,"foreground":37,"formatterClassStr":"PlayerInfo","formatterMethodStr":"format"},"user.component.PlayerInfo":{}}}

@@ -1,0 +1,1 @@
+An easy monopoly game by Java

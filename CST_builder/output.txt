@@ -1,0 +1,58 @@
+F ((A_{1} \or B_{1}) \imply (A_{1} \eq B_{1}))
+F ((A_{1} \or B_{1}) \imply (A_{1} \eq B_{1}))
+T (A_{1} \or B_{1})
+F (A_{1} \eq B_{1})
+T ((A_{1} \imply B_{2}) \eq (A_{1} \and B_{1}))
+T (A_{2} \and B_{1})
+T (A_{1} \or B_{1})
+T A_{1}
+T B_{1}
+T (A_{2} \imply B_{1})
+T (A_{2} \imply B_{1})
+F (A_{1} \eq B_{1})
+F (A_{1} \eq B_{1})
+T A_{1}
+F A_{1}
+T A_{1}
+F A_{1}
+F B_{1}
+F B_{1}
+T B_{1}
+T ((A_{1} \imply B_{2}) \eq (A_{1} \and B_{1}))
+T ((A_{1} \imply B_{2}) \eq (A_{1} \and B_{1}))
+T (A_{1} \imply B_{2})
+F (A_{1} \imply B_{2})
+T (A_{1} \imply B_{2})
+F (A_{1} \imply B_{2})
+T (A_{1} \and B_{1})
+F (A_{1} \and B_{1})
+T (A_{1} \and B_{1})
+F (A_{1} \and B_{1})
+T (A_{2} \and B_{1})
+T (A_{2} \and B_{1})
+T (A_{2} \and B_{1})
+T (A_{2} \and B_{1})
+T A_{2}
+T A_{2}
+T A_{2}
+T A_{2}
+T B_{1}
+T B_{1}
+T B_{1}
+T B_{1}
+T (A_{2} \imply B_{1})
+T (A_{2} \imply B_{1})
+F A_{2}
+T B_{1}
+F A_{2}
+T B_{1}
+T (A_{1} \imply B_{2})
+F (A_{1} \imply B_{2})
+F A_{1}
+T B_{2}
+T A_{1}
+T (A_{1} \and B_{1})
+T (A_{1} \and B_{1})
+T A_{1}
+T A_{1}
+表可证明！所有路径均矛盾。

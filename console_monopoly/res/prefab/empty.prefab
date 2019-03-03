@@ -1,0 +1,1 @@
+{"tag":"cell","layer":0,"position":{"x":0,"y":0},"direction":"DOWN","components":{"kernel.component.Trigger":{"enabled":true,"triggerType":2},"kernel.component.Renderer":{"enabled":true,"content":"icon.empty","height":2,"width":2,"background":40,"foreground":37},"user.component.Empty":{}}}

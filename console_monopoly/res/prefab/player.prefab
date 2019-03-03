@@ -1,0 +1,1 @@
+{"tag":"player","layer":2,"position":{"x":3,"y":2},"direction":"DOWN","components":{"user.component.Player":{"cash":5000,"deposit":5000,"coupon":100},"kernel.component.Trigger":{"enabled":true,"triggerType":0},"kernel.component.Renderer":{"enabled":true,"content":"icon.p","height":2,"width":2,"background":40,"foreground":37},"kernel.component.Mover":{}}}

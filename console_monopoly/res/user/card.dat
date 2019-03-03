@@ -1,0 +1,7 @@
+均富卡　	AverageCashPower	50	将所有人的现金平均分配
+拆迁卡　	StreetResetPower	30	该街道房产重置无主，补偿房主150%费用
+怪兽卡　	StreetTearPower	30	该街道房产降至1级
+红卡　　	StockUpPower	20	指定股票第二天涨停
+黑卡　　	StockDownPower	10	指定股票第二天跌停
+路障　　	CellBlockPower	50	在前后8步内摆放以使玩家停下
+遥控骰子	DiceControlPower	70	可任意控制骰子的结果
