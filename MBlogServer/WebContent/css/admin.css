@@ -1,0 +1,165 @@
+@CHARSET "UTF-8";
+
+/* chrome theme */
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Microsoft YaHei", Lato, sans-serif;
+}
+
+body {
+	margin: 0;
+	font-size: 100%;
+	background-color: #000;
+}
+
+p {
+	margin:16px 0 16px 0; 
+}
+
+h1 {
+	margin:21px 0 22px 0; 
+}
+
+/* blog theme */
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+a:hover {
+	color: #FF8C00;
+}
+
+.selected a {
+	color: #FF8C00;
+	font-weight: bold;
+}
+
+/* header */
+.entry-prompt {
+	padding: 0rem 6rem;
+	margin-top: -4rem;
+	font-weight: bold;
+}
+
+#blog-header {
+	/*background: url(../image/banner/default.png);*/
+	background-size: 100% auto;
+	background-repeat: no-repeat; 
+	padding: 4.5rem 2rem 1rem;
+	margin-bottom: 2rem;
+}
+
+#blog-name,
+#blog-description {
+	margin: 0rem;
+}
+
+/* main */
+.admin-main {
+	float: right;
+	width: 75%;
+	background-color: #EAEAEA;
+	background-size: 150% 150%;
+	padding: 3rem 3rem 3rem 3rem;
+	margin: 1rem 0;
+	min-height: 468px;
+}
+
+.admin-main p {
+	padding: 1rem 0;
+}
+
+.admin-main input[type=text], input[type=password] {
+	height:1.3rem;
+}
+
+.admin-main input[type="radio"] {
+	width: 1rem;
+	height: 1rem;
+}
+
+#submit, #submit1 {
+	font-size:0.85rem;
+	padding:3px 12px;
+	color: #FFF;
+	background-color: #00A0D2;
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+#submit:hover, #submit1 {
+	background-color: #0091CD;
+	cursor: pointer;
+}
+
+#editor_id {
+	width: 30rem;
+}
+
+select {
+	height: 1.5rem;
+	width: 5rem;
+}
+
+form span {
+	font-size: 0.9rem;
+}
+
+form span a {
+	color: red;
+	cursor: pointer;
+}
+
+/* aside */
+.admin-aside {
+	float: left;
+	width: 12%;
+	padding-top: 4rem;
+	padding-left: 2rem;
+}
+
+.admin-aside h1 {
+	font-size: 1.25rem;
+	color: white;
+}
+
+.admin-aside ul {
+	list-style: none;
+	padding: 0;
+	margin:16px 0 16px 0; 
+}
+
+.admin-aside li {
+	padding: 0.5rem;
+}
+
+/* table */
+table {
+	padding-left: 4rem;
+}
+
+th {
+	padding: 0.3rem 0;	
+}
+
+td {
+	padding: 0.5rem 1rem;
+}
+
+td a {
+	padding-right: 1rem;
+	color: #00A0D2;
+}
+
+#addOne {
+	width: 100%
+}
+
+/* editor */
+.inputTip {
+	font-size: 0.8rem;
+	color: gray;
+	cursor: pointer;
+}

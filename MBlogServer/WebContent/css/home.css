@@ -1,0 +1,287 @@
+@media only screen and (min-width: 480px) {
+
+/* chrome theme */
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Microsoft YaHei", Lato, sans-serif;
+}
+
+body {
+	margin: 0;
+	font-size: 100%;
+	background-color: #000;
+}
+
+p {
+	margin:16px 0 16px 0; 
+}
+
+h1 {
+	margin:21px 0 22px 0; 
+}
+
+/* blog theme */
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+a:hover {
+	color: #FF8C00;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin:16px 0 16px 0; 
+}
+
+li {
+	padding: 0.15rem;
+}
+
+img {
+	padding: 0rem 1rem;
+	max-width: 100%;
+}
+
+
+::selection {
+	background: #FF8C00;
+	color: #FFF;
+}
+
+.selected a {
+	color: #FF8C00;
+	font-weight: bold;
+}
+
+/* header */
+.entry-prompt {
+	padding: 0rem 6rem;
+	margin-top: -4rem;
+	font-weight: bold;
+}
+
+#blog-header {
+	/*background: url(../image/banner/default.png);*/
+	background-size: 100% auto;
+	background-repeat: no-repeat; 
+	padding: 4.5rem 2rem 1rem;
+	margin-bottom: 2rem;
+}
+
+#blog-name,
+#blog-description {
+	margin: 0rem;
+}
+
+/* aside */
+#blog-aside {
+	float: left;
+	width: 20%;
+	height: 100%;
+	color: #FFF;
+	font-size: 0.8rem;
+}
+
+#aside-wrapper {
+	margin: 0 auto;
+}
+
+.admin-about {
+	text-align: center;
+	font-size: 1.25rem;
+}
+
+.admin-social {
+	text-align: center;
+}
+
+.admin-avatar {
+	padding: 0;
+	margin-bottom: 1rem;
+	border-style: solid;
+	border-radius: 25px;
+}
+
+#blog-aside section {
+	margin: 3rem auto;
+	width: 60%;
+}
+
+/* main & footer */
+.site-main {
+	float: right;
+	width: 80%;
+	background-color: #FFF;
+	background-size: 150% 150%;
+	min-height: 350px;
+}
+
+#main-wrapper {
+	padding: 6rem 0rem 0rem 3rem;
+}
+
+.blog-footer {
+	clear: both;
+	color: #FFF;
+	font-size: 0.8rem;
+	padding: 1rem;
+	text-align: center;
+}
+
+/* article */
+article {
+	padding: 2rem 6rem;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: gray;
+}
+
+article a {
+	color: #000;
+}
+
+.post-info {
+	font-size: 0.8rem;
+	color: gray;
+	margin-bottom: 2rem;
+}
+
+.post-prompt {
+	padding: 0rem 6rem;
+}
+
+.post-title {
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+.post-content a {
+	color: #FF8C00;
+}
+
+.post-content a:hover {
+	text-decoration: underline;
+}
+
+.post-admin {
+	float: right;
+}
+
+.post-admin a {
+	color: gray;
+}
+
+/* page switch */
+.page-switch {
+	margin: 1rem auto;
+	text-align: center;
+}
+
+.page-switch a {
+	color: #000;
+	padding: 0.5rem;
+	font-weight: 500;
+}
+
+.page-switch a:hover {
+	color: #FF8C00;
+}
+
+#page-current {
+	color: #FF8C00;
+}
+
+/* prev-next */
+.prev-next p {
+	display: inline;
+	padding: 2rem 6rem;
+}
+
+.prev-next p a {
+	color: #FF8C00;
+}
+
+.prev-next p a:hover {
+	text-decoration: underline;
+}
+
+.prev {
+	float: left;
+}
+
+.next {
+	float: right;
+}
+
+/* comment */
+.post-comment {
+	padding: 2rem 6rem;
+	clear: both;
+}
+
+.post-comment > p {
+	font-weight: bold;
+}
+
+.post-comment div {
+	padding: 0rem 1rem;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: gray;
+}
+
+.comment-username {
+	font-weight: bold;
+	font-size: .85rem;
+}
+
+.comment-time {
+	font-size: .75rem;
+	color: grey;
+}
+
+/* editor */
+.comment-editor {
+	padding: 2rem 6rem;
+}
+
+.comment-editor > p {
+	font-weight: bold;
+}
+
+.comment-editor form {
+	padding: 0rem 1rem;
+}
+
+.comment-editor textarea {
+	width: 25rem;
+	height: 8rem;
+}
+
+.comment-editor input[type="submit"] {
+	width: 3rem;
+	height: 2rem;
+}
+
+/* post remain */
+.post-other a {
+	font-size: .75rem;
+	color: grey;
+}
+
+.comment-del {
+	float: right;
+	color: grey;
+}
+
+.innerlink {
+	color: black;
+	text-decoration: underline;
+}
+
+}
+

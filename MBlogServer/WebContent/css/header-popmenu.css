@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+/* general */
+body {
+	margin:0px;
+}
+
+/* background */
+#popback {
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	position:absolute;
+	filter: Alpha(opacity=50);
+	opacity:0.5; 
+	background:#000000;
+	display:none;
+}
+
+/* header */
+#header {
+	margin:5px;
+}
+
+#innerHeader {
+	margin:0 2rem;
+	float:right;
+}
+
+/* popmenu */
+.popmenu {
+	position:absolute;
+	width:16rem;	
+	left:50%; 
+	top:50%; 
+	margin:-10rem 0 0 -10rem;
+	padding:2rem;
+	border-radius:2rem;
+	display:none; 
+	background:#FFFFFF;
+	z-index:9;
+}
+
+.closePop {
+	color:red;
+	position:absolute;
+	right:1.5rem;
+	top:0.75rem;
+}
+
+.prompt {
+	color:red;
+	font-size:0.75rem;
+}
+
+.popmenu input[type=text], input[type=password] {
+	height:1rem;
+}
+
+.popmenu input[type=button], input[type=submit] {
+	font-size:0.85rem;
+	padding:1px 6px;
+}
+
+.hrefButton {
+	color:black;
+	font-size:0.9rem;
+	margin-left:1rem;
+}
